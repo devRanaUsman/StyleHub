@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Men's Casual T-Shirt",
+    "price": [{ "original": 25, "discount": 5, "price": 20 }],
+    "ImageUrl": "https://images.unsplash.com/photo-1598775378121-e24f7062c151?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNsb3RoaW5nJTIwc3RvcmV8ZW58MHx8MHx8fDA%3D",
+    "description": "Soft and breathable cotton t-shirt, perfect for everyday wear.",
+    "Size": "M",
+    "brand": "FitWear",
+    "category": "Men",
+    "isFeatured": true,
+    "rating": { "average": 4.5, "count": 120 }
+  },
+  {
+    "name": "Women's Slim Fit Jeans",
+    "price": [{ "original": 60, "discount": 10, "price": 50 }],
+    "ImageUrl": "https://plus.unsplash.com/premium_photo-1664202526535-c01e4b0c42b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNsb3RoaW5nJTIwc3RvcmV8ZW58MHx8MHx8fDA%3D",
+    "description": "Stretchable slim-fit jeans for maximum comfort and style.",
+    "Size": "S",
+    "brand": "DenimPro",
+    "category": "Women",
+    "isFeatured": false,
+    "rating": { "average": 4.0, "count": 80 }
+  },
+  {
+    "name": "Unisex Hoodie",
+    "price": [{ "original": 45, "discount": 0, "price": 45 }],
+    "ImageUrl": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvdGhpbmd8ZW58MHx8MHx8fDA%3D",
+    "description": "Warm fleece-lined hoodie for all-day comfort.",
+    "Size": "L",
+    "brand": "CozyLine",
+    "category": "Unisex",
+    "isFeatured": true,
+    "rating": { "average": 4.8, "count": 210 }
+  },
+  {
+    "name": "Kids Printed T-Shirt",
+    "price": [{ "original": 20, "discount": 3, "price": 17 }],
+    "ImageUrl": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhpbmd8ZW58MHx8MHx8fDA%3D",
+    "description": "Colorful and fun t-shirt for kids aged 5-10.",
+    "Size": "XS",
+    "brand": "TinyTrends",
+    "category": "Kids",
+    "isFeatured": false,
+    "rating": { "average": 4.3, "count": 34 }
+  },
+  {
+    "name": "Women's Sports Leggings",
+    "price": [{ "original": 40, "discount": 8, "price": 32 }],
+    "ImageUrl": "https://plus.unsplash.com/premium_photo-1675186049222-0b5018db6ce9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNsb3RoaW5nfGVufDB8fDB8fHww",
+    "description": "High-waisted performance leggings for workouts and yoga.",
+    "Size": "M",
+    "brand": "ActiveFlex",
+    "category": "Women",
+    "isFeatured": true,
+    "rating": { "average": 4.6, "count": 95 }
+  },
+  {
+    "name": "Men's Formal Shirt",
+    "price": [{ "original": 35, "discount": 5, "price": 30 }],
+    "ImageUrl": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNsb3RoaW5nfGVufDB8fDB8fHww",
+    "description": "Stylish and breathable formal shirt for office wear.",
+    "Size": "L",
+    "brand": "UrbanStyle",
+    "category": "Men",
+    "isFeatured": false,
+    "rating": { "average": 4.2, "count": 60 }
+  },
+  {
+    "name": "Women's Summer Dress",
+    "price": [{ "original": 55, "discount": 10, "price": 45 }],
+    "ImageUrl": "https://images.unsplash.com/photo-1544441893-675973e31985?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNsb3RoaW5nfGVufDB8fDB8fHww",
+    "description": "Lightweight summer dress with floral print.",
+    "Size": "S",
+    "brand": "SunBloom",
+    "category": "Women",
+    "isFeatured": true,
+    "rating": { "average": 4.7, "count": 132 }
+  },
+  {
+    "name": "Men's Jogger Pants",
+    "price": [{ "original": 50, "discount": 15, "price": 35 }],
+    "ImageUrl": "https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNsb3RoaW5nfGVufDB8fDB8fHww",
+    "description": "Casual jogger pants with zippered pockets and elastic waist.",
+    "Size": "XL",
+    "brand": "RunWay",
+    "category": "Men",
+    "isFeatured": false,
+    "rating": { "average": 4.1, "count": 45 }
+  }
+]

@@ -1,0 +1,29 @@
+.orig {
+  display: inline;
+}
+.orignal-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 15px;
+  width: 283px;
+  margin-left: 7px;
+  margin-top: 10px;
+}
+.orignal-div span {
+  display: block;
+}
+.orignal-div img {
+  height: 50px;
+}
+.Footer-return {
+  font-size: 15px;
+  width: 221px;
+  margin-left: 7px;
+}
+.footer-Section-3 {
+  margin-top: 60px;
+}
+footer {
+  font-size: 12px;
+}

@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.MAIN {
+    min-height: 70vh;
+}
