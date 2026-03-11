@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiUrl = "http://localhost:8080/items/api";
+const apiUrl = `${import.meta.env.VITE_API_URL}/items/api`;
 const itemService = {
   getItems: async () => {
     const response = await axios.get(`${apiUrl}/`);

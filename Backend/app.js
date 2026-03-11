@@ -16,7 +16,13 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://style-hub-fawn.vercel.app"],
+  origin: function (origin, callback) {
+    if (!origin || origin.includes("localhost") || origin.includes("vercel.app")) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
 };
 

@@ -15,8 +15,8 @@ export default function Newsletter() {
     setMessage("");
 
     try {
-      // Assuming your backend runs on localhost:8080 during dev
-      const response = await axios.post("http://localhost:8080/api/subscribe", { email });
+      // Use VITE_API_URL for backend connection
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/subscribe`, { email });
       if (response.data.success) {
         setStatus("success");
         setMessage("Thank you for subscribing!");
