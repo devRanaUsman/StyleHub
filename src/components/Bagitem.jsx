@@ -9,7 +9,7 @@ function Bagitem({ item }) {
     <>
       <div className="bag-item-container">
         <div className="item-left-part">
-          <img className="bag-item-img" src={item.image} alt="" />
+          <img className="bag-item-img" style={{ width: '100%', height: '100%', objectFit: 'cover' }} src={item.image} alt="" />
         </div>
         <div className="item-right-part">
           <div className="company"> {item.brand}</div>

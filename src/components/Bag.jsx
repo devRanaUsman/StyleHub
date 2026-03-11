@@ -12,9 +12,6 @@ const bag = () => {
         </div>
       </main>
     <Footer />
-      <script src="../data/items.js"></script>
-      <script src="../scripts/index.js"></script>
-      <script src="../scripts/bag.js"></script>
    </>
   );
 };

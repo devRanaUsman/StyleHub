@@ -73,12 +73,13 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
       <div style={{
         maxWidth: "1280px",
         margin: "0 auto",
-        padding: "0 24px",
+        padding: "0 15px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        height: "68px",
-        gap: "16px",
+        minHeight: "68px",
+        height: "auto",
+        gap: "10px",
       }}>
 
         {/* Mobile Menu */}
@@ -109,12 +110,12 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
           alignItems: "flex-start",
           lineHeight: 1.1,
         }}>
-          <span style={{ fontSize: "26px", fontWeight: "900", color: "#5355e9", letterSpacing: "-0.5px" }}>StyleHub</span>
-          <span style={{ fontSize: "9px", fontWeight: "700", color: "#6366f1", textTransform: "uppercase", letterSpacing: "2px" }}>FASHION FORWARD</span>
+          <span style={{ fontSize: "22px", fontWeight: "900", color: "#5355e9", letterSpacing: "-0.5px" }}>StyleHub</span>
+          <span style={{ fontSize: "8px", fontWeight: "700", color: "#6366f1", textTransform: "uppercase", letterSpacing: "1px" }}>FASHION FORWARD</span>
         </Link>
 
         {/* Search Bar */}
-        <div ref={searchRef} style={{ flex: 1, maxWidth: "580px", margin: "0 20px", position: "relative" }}>
+        <div className="desktop-search" ref={searchRef} style={{ flex: 1, maxWidth: "580px", margin: "0 10px", position: "relative" }}>
           <form onSubmit={handleSearch} style={{
             display: "flex",
             alignItems: "center",
@@ -497,8 +498,9 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
 
       <style>{`
         @media (max-width: 768px) {
-          .mobile-menu-btn { display: flex !important; }
+          .mobile-menu-btn { display: flex !important; margin-right: -5px; }
           .mobile-search { display: block !important; }
+          .desktop-search { display: none !important; }
         }
         @media (min-width: 769px) {
           .mobile-search { display: none !important; }
