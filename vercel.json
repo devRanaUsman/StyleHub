@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/items/api/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/api/subscribe/(.*)",
+      "destination": "/api"
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Access token interceptor with auto-refresh logic
 const api = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "https://style-hub-l871-p14h6pfb9-devranausmans-projects.vercel.app",
   withCredentials: true, // Important: allows setting/getting cookies
 });
 
@@ -17,7 +17,7 @@ api.interceptors.response.use(
     if (originalRequest.url.includes("/auth/refresh")) {
       return Promise.reject(error);
     }
-    
+
     if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       try {
@@ -30,7 +30,7 @@ api.interceptors.response.use(
       }
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default api;
