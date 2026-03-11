@@ -27,8 +27,7 @@ app.use("/items/api", ItemRouter);
 app.use("/auth", AuthRouter);
 app.use("/api/subscribe", SubscriberRouter);
 
-const DB_URL =
-  "mongodb+srv://Rmua:0000@cluster0.ywqrxcz.mongodb.net/stylishhub?retryWrites=true&w=majority&appName=Cluster0";
+const DB_URL = process.env.DB_URL;
 mongoose
   .connect(DB_URL)
   .then(() => {
