@@ -178,6 +178,9 @@ export default function CategoryNav() {
 
       <style>{`
         .category-nav-bar { display: block !important; }
+        @media (max-width: 768px) {
+          .category-nav-bar { display: none !important; }
+        }
         @keyframes fadeSlideDown {
           from { opacity: 0; transform: translateY(-6px); }
           to { opacity: 1; transform: translateY(0); }
