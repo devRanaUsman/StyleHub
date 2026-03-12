@@ -270,7 +270,7 @@ const AddItem = () => {
               <div className="input-group price-input">
                 <label htmlFor="originalPrice">Original Price *</label>
                 <div className="price-wrapper">
-                  <span className="price-currency">₹</span>
+                  <span className="price-currency">$</span>
                   <input
                     type="number"
                     id="originalPrice"
@@ -288,7 +288,7 @@ const AddItem = () => {
               <div className="input-group price-input">
                 <label htmlFor="discount">Discount Amount</label>
                 <div className="price-wrapper">
-                  <span className="price-currency">₹</span>
+                  <span className="price-currency">$</span>
                   <input
                     type="number"
                     id="discount"

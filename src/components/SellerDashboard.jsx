@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FiEdit2, FiTrash2, FiPlus, FiStar, FiPackage, FiX, FiCheck, FiSearch } from "react-icons/fi";
+import {
+  FiEdit2,
+  FiTrash2,
+  FiPlus,
+  FiStar,
+  FiPackage,
+  FiX,
+  FiCheck,
+  FiSearch,
+} from "react-icons/fi";
 import itemService from "../services/itemService";
 import "./SellerDashboard.css";
 
@@ -37,9 +46,9 @@ export default function SellerDashboard() {
 
   const showToast = (message, type = "success") => {
     const id = Date.now();
-    setToasts(prev => [...prev, { id, message, type }]);
+    setToasts((prev) => [...prev, { id, message, type }]);
     setTimeout(() => {
-      setToasts(prev => prev.filter(t => t.id !== id));
+      setToasts((prev) => prev.filter((t) => t.id !== id));
     }, 3000);
   };
 
@@ -73,22 +82,24 @@ export default function SellerDashboard() {
   };
 
   const totalProducts = items.length;
-  const featuredProducts = items.filter(item => item.isFeatured).length;
-  const uniqueCategories = new Set(items.map(item => item.category)).size;
+  const featuredProducts = items.filter((item) => item.isFeatured).length;
+  const uniqueCategories = new Set(items.map((item) => item.category)).size;
 
   return (
     <div className="seller-dashboard-container">
       {/* Toasts */}
       <div className="toast-container">
-        {toasts.map(toast => (
-          <div key={toast.id} className={`toast ${toast.type === 'error' ? 'error' : 'success'}`}>
+        {toasts.map((toast) => (
+          <div
+            key={toast.id}
+            className={`toast ${toast.type === "error" ? "error" : "success"}`}
+          >
             <FiCheck className="w-4 h-4" /> {toast.message}
           </div>
         ))}
       </div>
 
       <div className="dashboard-main-card">
-
         {/* Header Section */}
         <div className="dashboard-header">
           <div className="dashboard-title-box">
@@ -116,7 +127,7 @@ export default function SellerDashboard() {
               className="search-input"
             />
             {searchTerm && (
-              <button 
+              <button
                 onClick={() => setSearchTerm("")}
                 className="btn-clear-search"
                 aria-label="Clear search"
@@ -170,7 +181,9 @@ export default function SellerDashboard() {
                 <FiPackage className="w-6 h-6" />
               </div>
               <h3 className="empty-title">No products found</h3>
-              <p className="empty-subtitle">You haven't added any products to your catalog yet.</p>
+              <p className="empty-subtitle">
+                You haven't added any products to your catalog yet.
+              </p>
               <button
                 onClick={() => navigate("/add-item")}
                 className="btn-empty-add"
@@ -194,70 +207,84 @@ export default function SellerDashboard() {
                 {/* Table Body Rows */}
                 <div className="table-body">
                   {items
-                    .filter(item => {
+                    .filter((item) => {
                       if (!debouncedSearchTerm) return true;
                       const term = debouncedSearchTerm.toLowerCase();
-                      return item.name?.toLowerCase().includes(term) || item.brand?.toLowerCase().includes(term);
+                      return (
+                        item.name?.toLowerCase().includes(term) ||
+                        item.brand?.toLowerCase().includes(term)
+                      );
                     })
                     .map((item) => {
                       const itemPrice = item.price?.[0]?.price || 0;
                       return (
                         <div key={item._id} className="table-row">
-
-                        {/* Sub-column: Image & Basic Info */}
-                        <div className="product-info-cell">
-                          <div className="product-image-box">
-                            <img src={item.ImageUrl || item.imageUrl} alt={item.name} className="product-image" />
-                          </div>
-                          <div className="product-details">
-                            <Link to={`/item/${item._id}`} className="product-name">
-                              {item.name}
-                            </Link>
-                            <div className="product-badges">
-                              {item.brand && <span className="product-brand">{item.brand}</span>}
-                              {item.isFeatured && (
-                                <span className="badge-featured">
-                                  Featured
-                                </span>
-                              )}
+                          {/* Sub-column: Image & Basic Info */}
+                          <div className="product-info-cell">
+                            <div className="product-image-box">
+                              <img
+                                src={item.ImageUrl || item.imageUrl}
+                                alt={item.name}
+                                className="product-image"
+                              />
+                            </div>
+                            <div className="product-details">
+                              <Link
+                                to={`/item/${item._id}`}
+                                className="product-name"
+                              >
+                                {item.name}
+                              </Link>
+                              <div className="product-badges">
+                                {item.brand && (
+                                  <span className="product-brand">
+                                    {item.brand}
+                                  </span>
+                                )}
+                                {item.isFeatured && (
+                                  <span className="badge-featured">
+                                    Featured
+                                  </span>
+                                )}
+                              </div>
                             </div>
                           </div>
-                        </div>
 
-                        <div className="col-2">
-                          <span className="cell-text">{item.category}</span>
-                        </div>
-                        <div className="col-2">
-                          <span className="cell-text">{item.section}</span>
-                        </div>
+                          <div className="col-2">
+                            <span className="cell-text">{item.category}</span>
+                          </div>
+                          <div className="col-2">
+                            <span className="cell-text">{item.section}</span>
+                          </div>
 
-                        <div className="col-rating-flex">
-                          <FiStar className="fill-current w-3.5 h-3.5" />
-                          <span className="rating-value">{item.rating?.average || "0.0"}</span>
-                        </div>
+                          <div className="col-rating-flex">
+                            <FiStar className="fill-current w-3.5 h-3.5" />
+                            <span className="rating-value">
+                              {item.rating?.average || "0.0"}
+                            </span>
+                          </div>
 
-                        <div className="col-1">
-                          <span className="price-text">₹{itemPrice}</span>
-                        </div>
+                          <div className="col-1">
+                            <span className="price-text">${itemPrice}</span>
+                          </div>
 
-                        <div className="col-actions">
-                          <button
-                            onClick={() => handleEdit(item._id)}
-                            className="btn-action btn-edit"
-                          >
-                            <FiEdit2 className="w-3.5 h-3.5" /> Edit
-                          </button>
-                          <button
-                            onClick={() => handleDelete(item._id, item.name)}
-                            className="btn-action btn-delete"
-                          >
-                            <FiTrash2 className="w-3.5 h-3.5" /> Delete
-                          </button>
+                          <div className="col-actions">
+                            <button
+                              onClick={() => handleEdit(item._id)}
+                              className="btn-action btn-edit"
+                            >
+                              <FiEdit2 className="w-3.5 h-3.5" /> Edit
+                            </button>
+                            <button
+                              onClick={() => handleDelete(item._id, item.name)}
+                              className="btn-action btn-delete"
+                            >
+                              <FiTrash2 className="w-3.5 h-3.5" /> Delete
+                            </button>
+                          </div>
                         </div>
-
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
                 </div>
               </div>
             </div>
