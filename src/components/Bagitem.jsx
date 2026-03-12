@@ -15,8 +15,8 @@ function Bagitem({ item }) {
           <div className="company"> {item.brand}</div>
           <div className="item-name"> {item.name}</div>
           <div className="price-container">
-            <span className="current-price">Rs {item.price[0].price}</span>
-            <span className="original-price">Rs {item.price[0].original}</span>
+            <span className="current-price">$ {item.price[0].price}</span>
+            <span className="original-price">$ {item.price[0].original}</span>
             <span className="discount-percentage">
               ( {item.price[0].discount}% OFF)
             </span>
@@ -38,7 +38,7 @@ function Bagitem({ item }) {
             <div style={{ display: 'flex', alignItems: 'center', border: '1px solid #d4d5d9', borderRadius: '4px', overflow: 'hidden' }}>
               <button 
                 onClick={() => dispatch(BagActions.decrementQuantity(item.id))} 
-                style={{ width: '32px', height: '32px', background: '#f5f5f6', border: 'none', borderRight: '1px solid #d4d5d9', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}
+                style={{ width: '32px', height: '32px', background: '#f5f5f6', border: 'none', borderRight: '1px solid #d4d5d9', cu$or: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}
               >
                 -
               </button>
@@ -47,7 +47,7 @@ function Bagitem({ item }) {
               </div>
               <button 
                 onClick={() => dispatch(BagActions.incrementQuantity(item.id))} 
-                style={{ width: '32px', height: '32px', background: '#f5f5f6', border: 'none', borderLeft: '1px solid #d4d5d9', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}
+                style={{ width: '32px', height: '32px', background: '#f5f5f6', border: 'none', borderLeft: '1px solid #d4d5d9', cu$or: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}
               >
                 +
               </button>

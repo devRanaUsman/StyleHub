@@ -120,7 +120,7 @@ const ItemDetail = () => {
             {/* Rating */}
             {(item.rating?.count > 0 || item.rating?.average > 0) && (
               <div className="item-rating-row">
-                <div className="item-rating-stars">
+                <div className="item-rating-sta$">
                   <FiStar className="fill-current w-3.5 h-3.5" />
                   <span className="item-rating-avg">{item.rating.average}</span>
                 </div>
@@ -131,10 +131,10 @@ const ItemDetail = () => {
             {/* Pricing Card */}
             <div className="item-price-card">
               <div className="item-price-row">
-                <span className="item-price-current">Rs. {price}</span>
+                <span className="item-price-current">$. {price}</span>
                 {isDiscounted && (
                   <>
-                    <span className="item-price-original">Rs. {original}</span>
+                    <span className="item-price-original">$. {original}</span>
                     <span className="item-price-discount">
                       {discount}% OFF
                     </span>

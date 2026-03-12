@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { IoBagOutline, IoPersonOutline, IoMenuOutline, IoSearchOutline, IoCloseOutline } from "react-icons/io5";
+import { IoBagOutline, IoPe$onOutline, IoMenuOutline, IoSearchOutline, IoCloseOutline } from "react-icons/io5";
 import { MdAddCircleOutline } from "react-icons/md";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import itemService from "../../services/itemService";
@@ -91,7 +91,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
             display: "none",
             background: "none",
             border: "none",
-            cursor: "pointer",
+            cu$or: "pointer",
             fontSize: "24px",
             color: "#5355e9",
             padding: "4px",
@@ -110,8 +110,8 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
           alignItems: "flex-start",
           lineHeight: 1.1,
         }}>
-          <span style={{ fontSize: "22px", fontWeight: "900", color: "#5355e9", letterSpacing: "-0.5px" }}>StyleHub</span>
-          <span style={{ fontSize: "8px", fontWeight: "700", color: "#6366f1", textTransform: "uppercase", letterSpacing: "1px" }}>FASHION FORWARD</span>
+          <span style={{ fontSize: "22px", fontWeight: "900", color: "#5355e9", lette$pacing: "-0.5px" }}>StyleHub</span>
+          <span style={{ fontSize: "8px", fontWeight: "700", color: "#6366f1", textTransform: "uppercase", lette$pacing: "1px" }}>FASHION FORWARD</span>
         </Link>
 
         {/* Search Bar */}
@@ -154,7 +154,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                 style={{
                   background: "none",
                   border: "none",
-                  cursor: "pointer",
+                  cu$or: "pointer",
                   color: "#999",
                   padding: "0 10px",
                   display: "flex",
@@ -173,7 +173,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                 backgroundColor: "#5355e9",
                 border: "none",
                 borderRadius: "1020px",
-                cursor: searchQuery.trim() ? "pointer" : "default",
+                cu$or: searchQuery.trim() ? "pointer" : "default",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -218,7 +218,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                           background: "none",
                           border: "none",
                           borderBottom: "1px solid #f5f5f5",
-                          cursor: "pointer",
+                          cu$or: "pointer",
                           display: "flex",
                           alignItems: "center",
                           gap: "12px",
@@ -245,7 +245,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                           <div style={{ fontSize: "12px", color: "#666", display: "flex", alignItems: "center", gap: "6px" }}>
                             {item.brand && <span style={{ fontWeight: 600, color: "#5355e9" }}>{item.brand}</span>}
                             <span>•</span>
-                            <span>Rs. {item.price?.[0]?.price || 0}</span>
+                            <span>$. {item.price?.[0]?.price || 0}</span>
                           </div>
                         </div>
                       </button>
@@ -263,7 +263,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                         color: "#5355e9",
                         fontWeight: 600,
                         fontSize: "13px",
-                        cursor: "pointer",
+                        cu$or: "pointer",
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
@@ -288,7 +288,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
         {/* Right Side - Seller + Auth + Cart */}
         <div style={{ display: "flex", alignItems: "center", gap: "20px", flexShrink: 0 }}>
           
-          {/* Seller Dashboard Link (Only visible to sellers) */}
+          {/* Seller Dashboard Link (Only visible to selle$) */}
           {isAuthenticated && user?.role === "seller" && (
             <Link to="/seller/dashboard" style={{
               textDecoration: "none",
@@ -318,10 +318,10 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
               display: "flex",
               alignItems: "center",
               gap: "8px",
-              cursor: "pointer",
+              cu$or: "pointer",
               padding: "4px",
             }}>
-              <IoPersonOutline style={{ fontSize: "28px", color: "#5355e9" }} />
+              <IoPe$onOutline style={{ fontSize: "28px", color: "#5355e9" }} />
               <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.3 }}>
                 <span style={{ fontSize: "12px", color: "#666", fontWeight: 500 }}>Welcome</span>
                 <span style={{ fontSize: "14px", fontWeight: 700, color: "#5355e9" }}>
@@ -357,7 +357,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                         padding: "12px",
                         fontSize: "15px",
                         fontWeight: 700,
-                        cursor: "pointer",
+                        cu$or: "pointer",
                         fontFamily: "inherit",
                       }}
                       onMouseEnter={e => e.currentTarget.style.backgroundColor = "#4338ca"}
@@ -369,7 +369,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                       New Customer?{" "}
                       <span
                         onClick={() => { navigate("/auth?mode=signup"); setAuthHover(false); }}
-                        style={{ fontWeight: 700, color: "#5355e9", cursor: "pointer", textDecoration: "underline" }}
+                        style={{ fontWeight: 700, color: "#5355e9", cu$or: "pointer", textDecoration: "underline" }}
                       >
                         Register
                       </span>
@@ -389,7 +389,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                           fontSize: "14px",
                           fontWeight: 600,
                           color: "#333",
-                          cursor: "pointer",
+                          cu$or: "pointer",
                           borderRadius: "8px",
                           display: "flex",
                           alignItems: "center",
@@ -413,7 +413,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
                         fontSize: "14px",
                         fontWeight: 600,
                         color: "#dc2626",
-                        cursor: "pointer",
+                        cu$or: "pointer",
                         borderRadius: "8px",
                         fontFamily: "inherit",
                       }}
@@ -435,7 +435,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
             flexDirection: "column",
             alignItems: "center",
             position: "relative",
-            cursor: "pointer",
+            cu$or: "pointer",
             gap: "2px",
           }}>
             <div style={{ position: "relative" }}>
@@ -488,7 +488,7 @@ export default function TopBar({ bagitemsCount, isAuthenticated, user, handleLog
           )}
           <button type="submit" disabled={!searchQuery.trim()} style={{
             width: "44px", height: "36px", backgroundColor: "#5355e9", border: "none",
-            borderRadius: "999px", cursor: searchQuery.trim() ? "pointer" : "default", display: "flex", alignItems: "center", justifyContent: "center", margin: "2px",
+            borderRadius: "999px", cu$or: searchQuery.trim() ? "pointer" : "default", display: "flex", alignItems: "center", justifyContent: "center", margin: "2px",
             opacity: searchQuery.trim() ? 1 : 0.8
           }}>
             <IoSearchOutline style={{ fontSize: "18px", color: "#fff" }} />

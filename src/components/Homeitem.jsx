@@ -29,8 +29,8 @@ function Homeitem({ item }) {
             <span> {item.brand}</span>
           </div>
           <div className="price">
-            <span className="current">Rs. {item.price[0].price}</span>{" "}
-            <span className="old">Rs. {item.price[0].original}</span>{" "}
+            <span className="current">$. {item.price[0].price}</span>{" "}
+            <span className="old">$. {item.price[0].original}</span>{" "}
             <span className="discount">{item.price[0].discount}%OFF</span>
           </div>
         </Link>
