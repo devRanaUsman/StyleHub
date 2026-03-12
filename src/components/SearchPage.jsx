@@ -85,10 +85,10 @@ const SearchPage = () => {
                   </div>
                   <div className="search-item-footer">
                     <div className="search-item-price-col">
-                      <span className="search-item-price">Rs. {priceObj.price || 0}</span>
+                      <span className="search-item-price">$. {priceObj.price || 0}</span>
                       {hasDiscount && (
                         <span className="search-item-original-price">
-                          Rs. {priceObj.original}
+                          $. {priceObj.original}
                         </span>
                       )}
                     </div>

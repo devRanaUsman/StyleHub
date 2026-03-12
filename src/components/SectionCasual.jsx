@@ -27,7 +27,7 @@ function SectionCasual({ items, section }) {
         name: item.name,
         price: item.price,
         image: item.ImageUrl,
-      })
+      }),
     );
   };
 
@@ -71,15 +71,15 @@ function SectionCasual({ items, section }) {
                   {item.price?.[0] && (
                     <p className="card-text">
                       <span className="fw-bold me-2">
-                        Rs. {item.price[0].price}
+                        $. {item.price[0].price}
                       </span>
                       <span className="text-decoration-line-through text-muted me-2">
-                        Rs. {item.price[0].original}
+                        $. {item.price[0].original}
                       </span>
                       <span className="text-success">
                         {item.price[0].discount}% OFF
                       </span>
-                    </p>
+                      </p>
                   )}
                 </div>
               </Link>
